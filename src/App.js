@@ -1,6 +1,18 @@
-function App() {
+import NewTaskForm from "./NewTaskForm";
+import TaskList from "./TasksList";
+
+const App = () => {
   return (
-    <h1>Simple ToDo App</h1>
+    <div>
+      <header>
+        <h1>ToDo App</h1>
+      </header>
+
+      <div>
+        <NewTaskForm />
+        <TaskList />
+      </div>
+    </div>
   );
 }
 
