@@ -1,8 +1,26 @@
-const NewTaskForm = () => {
+import { useState } from 'react';
+
+const NewTaskForm = ({ task, onType, onSave }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
+  const handleChange = (e) => {
+    onType(e);
+  }
+
+  const handleClick = () => {
+    onSave();
+  }
+
   return (
-    <form>
-      <input type="text" />
-      <button>Add</button>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={task}
+        onChange={handleChange} />
+      
+      <button onClick={handleClick}>Add</button>
     </form>
   )
 };
