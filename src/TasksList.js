@@ -1,16 +1,9 @@
-const TaskList = () => {
-  const tasks = [
-    { title: 'Task 1' },
-    { title: 'Task 2' },
-    { title: 'Task 3' },
-    { title: 'Task 4' },
-  ];
-
+const TaskList = ({ tasks }) => {
   return (
     <ul>
       {
         tasks.map((task) => {
-          return <li key={ task.title }>{ task.title }</li>;
+          return <li key={ task }>{ task }</li>;
         })
       }
     </ul>

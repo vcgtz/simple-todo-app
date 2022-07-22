@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const NewTaskForm = ({ task, onType, onSave }) => {
   const handleSubmit = (e) => {
     e.preventDefault();

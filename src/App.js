@@ -31,7 +31,9 @@ const App = () => {
           task={task}
           onType={handleType}
           onSave={handleSave} />
-        <TaskList />
+        
+        <TaskList
+          tasks={tasksList} />
       </div>
     </div>
   );
