@@ -20,6 +20,11 @@ const App = () => {
     setTask('');
   }
 
+  const handleDelete = (oldTask) => {
+    const newTasksList = tasksList.filter((task) => task !== oldTask);
+    setTasksList(newTasksList);
+  };
+
   return (
     <div>
       <header>
@@ -33,7 +38,8 @@ const App = () => {
           onSave={handleSave} />
         
         <TaskList
-          tasks={tasksList} />
+          tasks={tasksList}
+          onDelete={handleDelete} />
       </div>
     </div>
   );
